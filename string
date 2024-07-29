@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class ArrayElementSearch {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+       
+        int size = scanner.nextInt();
+        
+       
+        int[] array = new int[size];
+        
+        
+        for (int i = 0; i < size; i++) {
+            array[i] = scanner.nextInt();
+        }
+        
+        
+        int searchElement = scanner.nextInt();
+        
+        
+        scanner.close();
+        
+        
+        boolean found = false;
+        for (int i = 0; i < size; i++) {
+            if (array[i] == searchElement) {
+                found = true;
+                break;
+            }
+        }
+        
+       
+        if (found) {
+            System.out.println(searchElement + " is presented in an array");
+        } else {
+            System.out.println(searchElement + " is not presented in an array.");
+        }
+    }
+}
